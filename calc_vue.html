@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Calculatrice vue js </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div align="center" class="content">
+                <div class="card" style="width: 18rem;">
+                    <div v-bind:title="auteur" class="card-body">
+                        <h5 class="card-title">Calculatrice VUE JS</h5>
+                    
+                          <span>{{ result }}</span></br>
+                          <input  type="button" class="btn btn-light" value="ON/C" v:onclick="renit">
+                          <input  type="button"  class="btn btn-light" value="&#8730;" v-on:click="special_function('sqrt')">
+                          <input  type="button"  class="btn btn-light" value="&sup2;" v-on:click="special_function('pow')">
+                          <input  type="button"  class="btn btn-light" value=" log " v-on:click="special_function('log')"></br>
+                          <input  type="button" class="btn btn-light" value="7" v-on:click="add('7')">
+                          <input  type="button"class="btn btn-light" value="8" v-on:click="add('8')">
+                          <input  type="button" class="btn btn-light" value="9" v-on:click="add('9')">
+                          <input  type="button" class="btn btn-light" value=":" v-on:click="add('/')"></br>
+                          <input  type="button" class="btn btn-light" value="4" v-on:click="add('4')">
+                          <input  type="button" class="btn btn-light" value="5" v-on:click="add('5')">
+                          <input  type="button" class="btn btn-light" value="6" v-on:click="add('6')">
+                          <input  type="button" class="btn btn-light" value="x" v-on:click="add('*')"></br>
+                          <input  type="button" class="btn btn-light" value="1" v-on:click="add('1')">
+                          <input  type="button" class="btn btn-light" value="2" v-on:click="add('2')">
+                          <input  type="button" class="btn btn-light" value="3" v-on:click="add('3')">
+                          <input  type="button" class="btn btn-light" value="-" v-on:click="add('-')"></br>
+                          <input  type="button" class="btn btn-light" value="0" v-on:click="add('0')">
+                          <input  type="button" class="btn btn-light" value="." v-on:click="add('.')">
+                          <input  type="button" class="btn btn-light" value="+" v-on:click="add('+')">
+                          <input  type="button" class="btn btn-light" value="=" v-on:click="calcul()">
+                          <p>
+                              <label>Convertisseur Masse</label>
+                              <input type="number" placeholder="Tonne" v-model="tonne">
+                              <input v-model="massConverter()">
+                          </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <script src="calc_vue.js"></script>
+        </body>
+    </html>
